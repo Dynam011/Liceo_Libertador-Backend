@@ -10,7 +10,7 @@ import {JWT_SECRET} from "../config.js"
 import jwt from "jsonwebtoken";
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
-
+import {URL_FRONT} from '../config.js';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Obtener todos los países
@@ -2328,7 +2328,7 @@ export const solicitarRecuperacion = async (req, res) => {
             }
         });
 
-        const enlace = `http://localhost:3000/restablecer/${token}`;
+        const enlace = URL_FRONT + `/restablecer/${token}`;
 
         await transporter.sendMail({
            
