@@ -70,7 +70,6 @@ export const students = async (req, res) => {
     const result = await pool.query(studentsQuery);
     const students = result.rows;
     res.json(students);
-    console.log("Students fetched successfully:", students);
   } catch (error) {
     console.log("Error fetching students:", error);
     res.status(500).json({ error: "Error al obtener estudiantes" });
