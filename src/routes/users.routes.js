@@ -108,28 +108,28 @@ import {
 const router = Router();
 
 // Obtener países
-router.get('/paises', verificarToken , verPais);
+router.get('/paises' , verPais);
 
 // Obtener estados por país (usando query param: ?idPais=1)
-router.get('/estadosPais', verificarToken , estadosPais);
+router.get('/estadosPais' , estadosPais);
 
 // Obtener municipios por estado (por URL param)
-router.get('/municipios/:idEstado', verificarToken , verMunicipios);
+router.get('/municipios/:idEstado' , verMunicipios);
 
 // Obtener parroquias por municipio
-router.get('/parroquias/:idMunicipio', verificarToken , verParroquias);
+router.get('/parroquias/:idMunicipio' , verParroquias);
 
 // Obtener nacionalidades
-router.get('/nacionalidades', verificarToken , verNacionalidades);
+router.get('/nacionalidades' , verNacionalidades);
 
 // Registrar estudiante
 router.post('/registrar', verificarToken , registrarEstudiante);
 
-router.post('/users', verificarToken ,createUser);
+router.post('/users' ,createUser);
 
-router.get('/tipos-documento', verificarToken , listarTiposDocumento);
+router.get('/tipos-documento' , listarTiposDocumento);
 
-router.post('/login', verificarToken ,validarUsuario);
+router.post('/login' ,validarUsuario);
 
 router.get("/estudiante/:cedula", verificarToken , buscarEstudiante);
 
