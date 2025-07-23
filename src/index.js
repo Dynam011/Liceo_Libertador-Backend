@@ -7,7 +7,7 @@ import morgan from "morgan";
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000" })); // Permite solicitudes desde el frontend
+app.use(cors({ origin: ["http://localhost:3000","https://liceolibertador.netlify.app"] })); // Permite solicitudes desde el frontend
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(usersRoutes);
