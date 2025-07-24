@@ -219,9 +219,9 @@ router.get('/docente/registro-calificaciones/:id_asignacion', verificarToken , i
 
 //
 
-router.post('/solicitar-recuperacion', verificarToken , solicitarRecuperacion);
+router.post('/solicitar-recuperacion' , solicitarRecuperacion);
 
-router.post('/restablecer/:token', verificarToken , restablecerContrasena);
+router.post('/restablecer/:token' , restablecerContrasena);
 
 /////////////// NUEVAS RUTAS XAVIER PELDON
 
