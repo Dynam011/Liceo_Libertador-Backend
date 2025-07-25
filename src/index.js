@@ -4,7 +4,7 @@ import { PORT } from "./config.js";
 import usersRoutes from "./routes/users.routes.js";
 import dashboardRoutes from "./routes/dashboard.routes.js";
 import morgan from "morgan";
-
+const path = require('path');
 const app = express();
 // Sirve los archivos estáticos de la carpeta 'build' (o 'dist' si usas Vite)
 app.use(express.static(path.join(__dirname, 'build')));
