@@ -138,11 +138,11 @@ router.get('/docente/materias-estudiantes', verificarToken , listarMateriasYEstu
 ////////////////////////*
 
 
-router.get("/constancia/:cedula" ,constancia);
+router.get("/constancia/:cedula", verificarToken ,constancia);
 
 router.get('/docente/:cedula', verificarToken , buscarDocente);
 
-router.get('/constancia-trabajo/:cedula' , constanciaTrabajoDocente);
+router.get('/constancia-trabajo/:cedula', verificarToken , constanciaTrabajoDocente);
 
 router.get("/usuarios/cedulas", verificarToken , obtenerCedulasUsuarios);
 
