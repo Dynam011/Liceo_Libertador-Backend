@@ -4,6 +4,7 @@ export const verificarToken = (req, res, next) => {
     const authHeader = req.headers.authorization;
 
     if (!authHeader) {
+        console.log(authHeader);
         return res.status(403).json({ mensaje: "Acceso denegado. No hay token" });
     }
 
