@@ -5035,6 +5035,7 @@ export const registrarSeccion = async (req, res) => {
         );
         res.status(201).json({ mensaje: "Sección registrada", seccion: result.rows[0] });
     } catch (error) {
+      console.log(error)
         res.status(500).json({ mensaje: "Error registrando sección" });
     }
 };
